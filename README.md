@@ -1,10 +1,28 @@
 # **Finding Lane Lines on the Road** 
 <img src="laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 
-When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
+When we drive, we use our eyes to decide where to go. The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm. In this project,  I use Python and OpenCV to detect lane lines in images. 
 
-In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
+# What I did
+This is the first project of the udacity self-driving car engineer nanodegree. The pipeline is in P1.ipynb. In the project, our objective is to using some computer vision methods to detect lane lines in videos. The expected result will looks like P1_example.mp4. 
 
+To detect lane lines in a video is actually to detect lane lines in series of pictures. Here I will simply discuss about the pipeline I use to complete this task:
+
+(1) Transform the image to grayscale;
+
+(2) Conduct a gaussian blur on the grayscale image to reduce the noise;
+
+(3) Conduct canny edge detection (parameters: low_threshold and high_threshold). The algorithm will first detect strong edge (strong gradient) pixels above the high_threshold, and reject pixels below the low_threshold. Next, pixels with values between the low_threshold and high_threshold will be included as long as they are connected to strong edge; 
+
+(4) Use a four sided polygon mask to filter the image. We do this to simplify the task because the lane lines will always be in some range of the pictures. This step also can be done early; 
+
+(5) Run hough transformation to find the lane lines; 
+
+(6) Draw the lane lines on the picture. We should be careful in this step because there are many lines that are actually lane lines. Here we filter all line segments by the slopes and the difference to the median of all segments. 
+
+I did not finish the optional challenge. It will be solved here: https://github.com/Gan-Jiang/Self-Driving-P4-Advanced-Lane-Lines. 
+
+# Dependencies. 
 **Step 1:** Getting setup with Python
 
 To do this project, you will need Python 3 along with the numpy, matplotlib, and OpenCV libraries, as well as Jupyter Notebook installed. 
