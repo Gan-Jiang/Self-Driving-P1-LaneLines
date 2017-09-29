@@ -1,9 +1,9 @@
-# **Finding Lane Lines on the Road** 
+## **Finding Lane Lines on the Road** 
 <img src="laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 
 When we drive, we use our eyes to decide where to go. The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm. In this project,  I use Python and OpenCV to detect lane lines in images. 
 
-# What I did
+### What I did
 This is the first project of the udacity self-driving car engineer nanodegree. The pipeline is in P1.ipynb. In the project, our objective is to using some computer vision methods to detect lane lines in videos. The expected result will looks like P1_example.mp4. 
 
 To detect lane lines in a video is actually to detect lane lines in series of pictures. Here I will simply discuss about the pipeline I use to complete this task:
@@ -22,7 +22,7 @@ To detect lane lines in a video is actually to detect lane lines in series of pi
 
 I did not finish the optional challenge. It will be solved here: https://github.com/Gan-Jiang/Self-Driving-P4-Advanced-Lane-Lines. 
 
-# Dependencies. 
+### Dependencies. 
 **Step 1:** Getting setup with Python
 
 To do this project, you will need Python 3 along with the numpy, matplotlib, and OpenCV libraries, as well as Jupyter Notebook installed. 
